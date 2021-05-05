@@ -1,7 +1,5 @@
 package com.example.simplenotes;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class ModifyCountryActivity extends Activity implements View.OnClickListener{
+public class ModifyCountryActivity extends Activity implements View.OnClickListener {
 
     private EditText titleText;
     private Button updateBtn, deleteBtn;
@@ -17,6 +15,7 @@ public class ModifyCountryActivity extends Activity implements View.OnClickListe
 
     private long _id;
     private DBManager dbManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +46,7 @@ public class ModifyCountryActivity extends Activity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_update:
                 String title = titleText.getText().toString();
                 String desc = descText.getText().toString();
@@ -63,7 +62,7 @@ public class ModifyCountryActivity extends Activity implements View.OnClickListe
         }
     }
 
-    public void returnHome(){
+    public void returnHome() {
         Intent home_intent = new Intent(getApplicationContext(),
                 CountryListActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 

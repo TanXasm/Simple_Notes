@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.simplenotes.CountryListActivity">
 
-    <item android:id="@+id/add_record"
+    <item
+        android:id="@+id/add_record"
         android:icon="@android:drawable/ic_menu_add"
         android:orderInCategory="100"
         android:title="Add Item"
-        app:showAsAction="always"/>
+        app:showAsAction="always" />
 
 
 </menu>

@@ -1,19 +1,20 @@
 package com.example.simplenotes;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class AddCountryActivity extends AppCompatActivity implements View.OnClickListener{
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AddCountryActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button addToDoBtn;
     private EditText subjectEditText;
     private EditText descEditText;
     private DBManager dbManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ public class AddCountryActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.add_record:
                 final String name = subjectEditText.getText().toString();
                 final String desc = descEditText.getText().toString();

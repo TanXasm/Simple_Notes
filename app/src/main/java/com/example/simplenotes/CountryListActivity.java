@@ -38,7 +38,7 @@ public class CountryListActivity extends AppCompatActivity {
         listView.setEmptyView(findViewById(R.id.empty));
 
         simpleCursorAdapter = new SimpleCursorAdapter(this, R.layout.activity_view_record,
-                cursor, from, to,0);
+                cursor, from, to, 0);
         simpleCursorAdapter.notifyDataSetChanged();
 
         listView.setAdapter(simpleCursorAdapter);
@@ -74,7 +74,7 @@ public class CountryListActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if(id==R.id.add_record){
+        if (id == R.id.add_record) {
             Intent add_mem = new Intent(this, AddCountryActivity.class);
             startActivity(add_mem);
         }
